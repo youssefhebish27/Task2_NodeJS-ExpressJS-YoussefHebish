@@ -1,0 +1,133 @@
+/* public/css/login.css (The "Registry" Theme) */
+
+body {
+    background-color: #f4f0e8; 
+    background-image: url('https://www.transparenttextures.com/patterns/old-map.png');
+    font-family: 'Merriweather', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #333; 
+}
+
+.login-container {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    padding: 3rem;
+    width: 450px;
+    text-align: center;
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.form-logo {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.form-title {
+    font-family: 'Cinzel Decorative', cursive; 
+    color: #212529;
+    font-size: 1.75rem;
+    margin: 0;
+}
+
+.form-subtitle {
+    font-size: 1rem;
+    color: #6c757d; 
+    margin-bottom: 2.5rem;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 14px 10px;
+    font-size: 1rem;
+    font-family: 'Merriweather', serif;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    background: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+.form-label {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    font-size: 1rem;
+    color: #999;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    background: #f9f9f9;
+    padding: 0 5px;
+}
+
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+    top: -10px; 
+    left: 10px;
+    font-size: 0.85rem;
+    color: #212529; 
+}
+
+.form-input:focus {
+    border-color: #212529; 
+    background: #fff;
+}
+
+.cta-button {
+    background: #212529; 
+    color: #ffffff;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    font-family: 'Merriweather', serif;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    letter-spacing: 0.5px;
+}
+
+.cta-button:hover {
+    background: #343a40; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.form-footer {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.form-footer a {
+    color: #0d6efd;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.form-footer a:hover {
+    text-decoration: underline;
+}
+
+.credit-footer {
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    color: #999; 
+}

@@ -3,32 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Hogwarts Registry - Register</title>
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦉</text></svg>">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/login.css">
 </head>
 <body>
-    <div class="container" id="reg">
-        <h1>Register</h1>
 
-        <% if (errorMsg) { %>
-             <div style="background-color:#f8d7da;color:#721c24;padding:10px;margin-bottom:15px;border-radius:5px;">
-                 <%= errorMsg %>
-             </div>
-        <% } %>
-
-        <form action="/register" method="post">
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username" required>
-
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required>
-
-            <button type="submit">Register</button>
+    <div class="login-container">
+        
+        <form action="/auth/register" method="POST" class="login-form">
+            
+            <div class="form-logo">🦉</div>
+            <h1 class="form-title">NEW APPLICATION</h1>
+            <p class="form-subtitle">Register for Ministry access</p>
+            
+            <div class="input-group">
+                <input type="text" id="username" name="username" class="form-input" required autocomplete="off" placeholder=" ">
+                <label for="username" class="form-label">Your Name</label>
+            </div>
+            
+            <div class="input-group">
+                <input type="password" id="password" name="password" class="form-input" required placeholder=" ">
+                <label for="password" class="form-label">Create a Secret (Password)</label>
+            </div>
+            
+            <button type="submit" class="cta-button">
+                <span>Submit Application</span>
+            </button>
+            
+            <p class="form-footer">
+                Already registered? <a href="/auth/login">Login here</a>
+            </p>
+            <p class="credit-footer">A site by Youssef Hebish</p>
         </form>
-
-        <p style="margin-top: 15px;">
-            Already have an account? <a href="/login" class="link">Login here</a>
-        </p>
+        
     </div>
+
 </body>
 </html>
